@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const List = ({list}) => {
-    const  {name, username, email, phone, company} = list;
+  const navigate = useNavigate();
+    const  {id, name, username, email, phone, company} = list;
 
     return (
-        <tr className='border-b border-b-gray-300 text-gray-900 text-sm'>
+        <tr 
+        onClick={()=>navigate(`users/${id}`)}
+        className='cursor-pointer hover:bg-gray-50 border-b border-b-gray-300 text-gray-900 text-sm'>
               <td className="p-3">
                 <div className="flex flex-col ">
                   <span>{name}</span>
