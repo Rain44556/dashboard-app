@@ -8,7 +8,7 @@ const List = ({list}) => {
     return (
         <tr 
         onClick={()=>navigate(`users/${id}`)}
-        className='cursor-pointer hover:bg-gray-50 border-b border-b-gray-300 text-gray-900 text-sm'>
+        className='cursor-pointer hover:bg-gray-50 border-b hover:scale-102 border-b-gray-300 text-gray-900 text-sm'>
               <td className="p-3">
                 <div className="flex flex-col ">
                   <span>{name}</span>
